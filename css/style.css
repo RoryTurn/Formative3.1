@@ -1,3 +1,207 @@
+.footerbox {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  background: #2c061f;
+  align-items: center;
+  justify-content: center;
+}
+.footerbox_inner {
+  width: 95%;
+  height: 70%;
+  display: flex;
+  background: #374045;
+  justify-content: center;
+  align-items: center;
+}
+.footerbox_text {
+  background: none;
+  width: 85%;
+  height: 100%;
+  align-items: center;
+  text-align: left;
+  justify-content: center;
+}
+.footerbox_font {
+  margin-top: 14px;
+  background: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+#aboutbutton {
+  background: #efefef;
+  border: 2px solid #d89216;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  width: 140px;
+  color: #2c061f;
+}
+
+#aboutbutton:hover {
+  background: #2c061f;
+  color: white;
+}
+
+.bodybox {
+  width: 100vw;
+  height: 75vh;
+  background: #e1d89f;
+  display: flex;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 100vw;
+  background: #2c061f;
+  align-items: center;
+  justify-content: center;
+}
+.navbar_top {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  background: none;
+  align-items: center;
+  justify-content: center;
+}
+.navbar_top_main {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  background: #374045;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top-left-radius: 30px;
+}
+.navbar_top_button {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  background: #000957;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top-right-radius: 30px;
+}
+.navbar_search {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  background: #d89216;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.navbar_search_box {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  background: none;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.navbar_search_spanner {
+  width: 20%;
+  background: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+.navbar_search_inputtyper {
+  width: 80%;
+  height: 100%;
+  background: #2c061f;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  border: 2px solid #577bc1;
+}
+
+.title {
+  font-family: "League Spartan", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  line-height: normal;
+  background: #2c061f;
+  padding: 8px;
+  border-radius: 10px;
+  margin-right: 35vw;
+}
+
+.title:hover {
+  background: #ebe645;
+  color: #000957;
+  font-size: 38px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background: url("../img/newspaper.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: invert(100);
+}
+
+#buttonheader {
+  background: #344cb7;
+  border: 2px solid #ebe645;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  width: 140px;
+}
+
+#buttonheader:hover {
+  background: #ebe645;
+  border: 2px solid #efefef;
+  color: black;
+}
+
+#buttonheader2 {
+  background: #344cb7;
+  border: 2px solid #ebe645;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  width: 140px;
+}
+
+#buttonheader2:hover {
+  background: #ebe645;
+  border: 2px solid #efefef;
+  color: #000957;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  background: black;
+  color: White;
+}
+
+html {
+  overflow-x: hidden;
+}
+
 .container {
   width: 100vw;
   height: 200vh;
