@@ -1,5 +1,5 @@
 @import "var";
-
+// nav button classes
 .link{
 width: auto;
 height: auto;
@@ -9,6 +9,11 @@ font-family: $fontbody;
 font-size: larger;
 letter-spacing: normal;
 line-height: auto;
+                    &_menu{
+                        list-style-type: none;
+                        height: fit-content;
+                        
+                    }
 }
 
 #buttonheader{

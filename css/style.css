@@ -168,6 +168,10 @@
   letter-spacing: normal;
   line-height: auto;
 }
+.link_menu {
+  list-style-type: none;
+  height: fit-content;
+}
 
 #buttonheader {
   background: #344cb7;
