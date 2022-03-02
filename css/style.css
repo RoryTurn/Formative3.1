@@ -158,6 +158,17 @@
   filter: invert(100);
 }
 
+.link {
+  width: auto;
+  height: auto;
+  background: #efefef;
+  color: #2c061f;
+  font-family: "League Spartan", sans-serif;
+  font-size: larger;
+  letter-spacing: normal;
+  line-height: auto;
+}
+
 #buttonheader {
   background: #344cb7;
   border: 2px solid #ebe645;

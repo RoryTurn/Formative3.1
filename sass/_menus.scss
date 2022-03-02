@@ -1,2 +1,41 @@
 @import "var";
 
+.link{
+width: auto;
+height: auto;
+background: $mainoffwhite;
+color: $maindark;
+font-family: $fontbody;
+font-size: larger;
+letter-spacing: normal;
+line-height: auto;
+}
+
+#buttonheader{
+    background: $elementmed;
+    border: 2px solid $elementalert;
+    font-family: $fontextras;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    width: 140px;
+}
+#buttonheader:hover{
+    background: $elementalert;
+    border: 2px solid $mainoffwhite;
+    color: black;
+}
+#buttonheader2{
+    background: $elementmed;
+    border: 2px solid $elementalert;
+    font-family: $fontextras;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    width: 140px;
+}
+#buttonheader2:hover{
+    background: $elementalert;
+    border: 2px solid $mainoffwhite;
+    color: $elementdark;
+}
