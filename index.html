@@ -76,7 +76,14 @@
 
 <!-- body-box -->
  <div class="bodybox">
+    <!-- Button trigger modal -->
 
+  <div class="cardbox">
+  <div id="cardContent" class="cardbox_content">
+  </div>
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+    Launch demo modal
+  </button> -->
  </div>    
 
 <!-- body box end    -->
@@ -92,27 +99,26 @@
     </div>
 </div>
 <!-- footer end -->
-    <!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-    Launch demo modal
-  </button> -->
+
 <!-- modal start -->
 <!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <div class="modal-header" id="modalHead">
+          <h5 class="modal-title" id="modalTitle">Modal title</h5>
+          <h3 class="modal-source" id="modalSource">Modal Source</h3>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-          ...
+        <div class="modal-body" id="modalBody">
+          
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="submit"  id="modalButton" class="btn btn-primary"><a id="modalURL" href="">Go to URL</a></button>
+          <button type="button" id="modalClose"  class="btn btn-secondary" data-dismiss="modal">Close</button>
+          
         </div>
       </div>
     </div>
