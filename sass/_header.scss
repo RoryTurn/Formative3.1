@@ -47,7 +47,7 @@
         flex-direction: row;
         background: $mainorange;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         text-align: left;
         border-bottom-left-radius: 30px; 
         border-bottom-right-radius: 30px;
@@ -81,6 +81,42 @@
             font-size: 20px;
             letter-spacing: 0.5px;
             border: 2px solid $elementlight;
+        
+        }
+        &_country{
+            width: 30%;
+            height: 100%;
+            background: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+        }
+        &_topic{
+            width: 30%;
+            height: 100%;
+            background: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+        }
+        &_text{
+            background: none;
+            font-family: $fontbody;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 0.5px; 
+            color: $maindark;
+            margin-top: 22.5px;
+            
+        }
+        &_text:hover{
+            font-size: 22px;
+            color: white;
         }
     }
 }
@@ -95,6 +131,7 @@
     padding: 8px;
     border-radius: 10px;
     margin-right: 35vw;
+
 }
 .title:hover{
     background: $elementalert;

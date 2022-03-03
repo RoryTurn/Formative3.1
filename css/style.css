@@ -97,7 +97,7 @@
   flex-direction: row;
   background: #d89216;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: left;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -129,6 +129,38 @@
   font-size: 20px;
   letter-spacing: 0.5px;
   border: 2px solid #577bc1;
+}
+.navbar_search_country {
+  width: 30%;
+  height: 100%;
+  background: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.navbar_search_topic {
+  width: 30%;
+  height: 100%;
+  background: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.navbar_search_text {
+  background: none;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: #2c061f;
+  margin-top: 22.5px;
+}
+.navbar_search_text:hover {
+  font-size: 22px;
+  color: white;
 }
 
 .title {
