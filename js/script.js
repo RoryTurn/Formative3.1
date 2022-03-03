@@ -20,11 +20,12 @@ function countryChanger(x){
 
     if  (x === "1"){
     
-nation = "country=nz";
-var web = "https://gnews.io/api/v4/" + query + nation + "?" + language + "?" + max + "&token=" + key;
-console.log(nation); 
-console.log(web);
-ajaxFunc(nation, web);   
+       nation = "country=nz";
+       var web = "https://gnews.io/api/v4/" + query + nation + "?" + language + "?" + max + "&token=" + key;
+       console.log(nation); 
+       console.log(web);
+       document.getElementById("navCountry").innerHTML= "Country: New Zealand";
+       ajaxFunc(nation, web);   
     
 
     }
@@ -33,6 +34,7 @@ ajaxFunc(nation, web);
         nation = "country=de";
         var web = "https://gnews.io/api/v4/" + query + nation + "?" + language + "?" + max + "&token=" + key;
         console.log(nation, web);
+        document.getElementById("navCountry").innerHTML= "Country: Germany";
         ajaxFunc(nation, web);   
         }
 if (x  === "3"){
@@ -40,6 +42,7 @@ if (x  === "3"){
         nation = "country=gb";
         var web = "https://gnews.io/api/v4/" + query + nation + "?" + language + "?" + max + "&token=" + key;
         console.log(nation, web);
+        document.getElementById("navCountry").innerHTML= "Country: United Kingdom";
         ajaxFunc(nation, web);   
         }
  if (x  === "4"){
@@ -47,6 +50,7 @@ if (x  === "3"){
         nation = "country=jp"
         var web = "https://gnews.io/api/v4/" + query + nation + "?" + language + "?" + max + "&token=" + key;
         console.log(nation, web);
+        document.getElementById("navCountry").innerHTML= "Country: Japan";
         ajaxFunc(nation, web);   
 
         }
@@ -55,6 +59,7 @@ if (x  === "3"){
         nation = "country=us";
         var web = "https://gnews.io/api/v4/" + query + nation + "?" + language + "?" + max + "&token=" + key;        
         console.log(nation, web);
+        document.getElementById("navCountry").innerHTML= "Country: United States";
         ajaxFunc(nation, web);   
         
 
@@ -77,30 +82,35 @@ $('#categoryMenu li a').click(function(){
      console.log("One")
      var query= "top-headlines?";
      var web = "https://gnews.io/api/v4/" + query + nation + "?" + language + "?" + max + "&token=" + key;
+     document.getElementById("navTopic").innerHTML= "Topic: Top Headlines";
      ajaxFunc(query, web); 
      }
   if (z  === "2"){
          console.log("Two")
          var query= "search?q=technology&/";
          var web = "https://gnews.io/api/v4/" + query + nation + "?" + language + "?" + max + "&token=" + key;
+         document.getElementById("navTopic").innerHTML= "Topic: Technology News";
          ajaxFunc(query, web);          
          }
  if (z  === "3"){
          console.log("Three")
          query = "search?q=science&/";
          var web = "https://gnews.io/api/v4/" + query + nation + "?" + language + "?" + max + "&token=" + key;
+         document.getElementById("navTopic").innerHTML= "Topic: Science News";
          ajaxFunc(query, web);          
          }
   if (z  === "4"){
          console.log("Four")
          query = "search?q=entertainment&/";
          var web = "https://gnews.io/api/v4/" + query + nation + "?" + language + "?" + max + "&token=" + key;
+         document.getElementById("navTopic").innerHTML= "Topic: Entertainment News";
          ajaxFunc(query, web);         
          }
   if (z  === "5"){
          console.log("Five")
          query = "search?q=health&/";
          var web = "https://gnews.io/api/v4/" + query + nation + "?" + language + "?" + max + "&token=" + key;
+         document.getElementById("navTopic").innerHTML= "Topic: Health News";
          ajaxFunc(query, web);          
          }
 
@@ -108,12 +118,7 @@ $('#categoryMenu li a').click(function(){
  };
 
 
- function headerChangerCountry(){
 
- }
- function topicChangerCountry(){
-        
-}
 function ajaxFunc(nation, web){
 $.ajax({
     type: "GET",
