@@ -1,0 +1,151 @@
+@import "var";
+
+// nav bar classes (for buttons see menus sass)
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    width: 100vw;
+    background: $maindark;
+    align-items: center;
+    justify-content: center;
+    &_top{
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-direction: row;
+        background: none;
+        align-items: center;
+        justify-content: center;
+        
+        &_main{
+            width: 70%;
+            height: 100%;
+            display: flex;
+            background: $mainmed;
+            align-items: center;
+            justify-content: space-evenly;
+            border-top-left-radius: 30px;
+
+        } 
+        &_button{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            background: $elementdark;
+            align-items: center;
+            justify-content: space-evenly;
+            border-top-right-radius: 30px;
+
+        }
+    }
+    &_search{
+        width: 100%;
+        height: 40%;
+        display: flex;
+        flex-direction: row;
+        background: $mainorange;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: left;
+        border-bottom-left-radius: 30px; 
+        border-bottom-right-radius: 30px;
+        &_box{
+            width: 30%;
+            height: 80%;
+            display: flex;
+            flex-direction: row;
+            background: none;
+            text-align: center;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        &_spanner{
+            width: 20%;
+            background: none;
+            font-family: $fontextras;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 0.5px;
+
+        }
+        &_inputtyper{
+            width: 80%;
+            height: 100%;
+            background: $maindark;
+            font-family: $fontextras;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 0.5px;
+            border: 2px solid $elementlight;
+        
+        }
+        &_country{
+            width: 30%;
+            height: 100%;
+            background: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+        }
+        &_topic{
+            width: 30%;
+            height: 100%;
+            background: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+        }
+        &_text{
+            background: none;
+            font-family: $fontbody;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 0.5px; 
+            color: $maindark;
+            margin-top: 22.5px;
+            
+        }
+        &_text:hover{
+            font-size: 22px;
+            color: white;
+        }
+    }
+}
+
+.title{
+    font-family: $fontheader;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: normal;
+    background: $maindark;
+    padding: 8px;
+    border-radius: 10px;
+    margin-right: 35vw;
+
+}
+.title:hover{
+    background: $elementalert;
+    color: $elementdark;
+    font-size: 38px; 
+}
+
+.logo{
+width: 50px;
+height: 50px;
+background: url("../img/newspaper.png");
+background-size: contain;
+background-repeat: no-repeat;
+filter: invert(100);
+
+
+}

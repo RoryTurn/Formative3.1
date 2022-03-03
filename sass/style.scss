@@ -1,6 +1,25 @@
+@import "var";
+@import "about";
+@import "footer";
+@import "body";
+@import "header";
+@import "menus";
+@import "modal";
+* {
+    margin: 0;
+    padding: 0;   
+    text-decoration: none; 
+    background: black;
+    color :White; 
+  }
+  html{
+    overflow-x: hidden;
+  }
+
 .container{
     width: 100vw;
     height: 200vh;
     background: grey;
     color: white;
 }
+

@@ -4,20 +4,127 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0", shrink-to-fit=no">
-    
-
+<!-- fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&family=Oswald&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+<!-- bootstrap styles     -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!-- local stylesheet -->
     <link  href="./css/style.css" rel="stylesheet">
     <title>Formative</title>
 </head>
 <body>
-    <div  class="container" id="example"></div>
+    
+        <!-- navbar-->
+<nav class="navbar">
+    <div class="navbar_top">
+
+        <div class="navbar_top_main">
+            <div class="logo"></div>
+            <h class="title">News Station Sigma</h>
+            
+        </div>
+        <div class="navbar_top_button">
+            <div class="btn-group">
+                <button id="buttonheader" class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Country
+                </button>
+                <div class="dropdown-menu">
+                  <ul class="link_menu"  id="countryMenu">
+                  <li class="link"><a href="#" rel="1">New Zealand</a></li>                  
+                  <li class="link"><a href="#" rel="2">Germany</a></li>                  
+                  <li class="link"><a href="#" rel="3">United Kingdom</a></li>
+                  <li class="link"><a href="#" rel="4">Japan</a></li>
+                  <li class="link"><a href="#" rel="5">United States</a></li> 
+                </ul>                
+                </div>
+              </div>
+              <div class="btn-group">
+                <button   id="buttonheader2" class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Category
+                </button>
+                <div class="dropdown-menu">
+                  <ul class="link_menu" id="categoryMenu">
+                  <li class="link" value="1"><a href="#" rel="1">Top Headlines</a></li>
+                  <li class="link" value="2"><a href="#" rel="2">Technology News</a></li>
+                  <li class="link" value="3"><a href="#" rel="3">Science News</a></li>
+                  <li class="link" value="4"><a href="#" rel="4">Entertainment News</a></li>
+                  <li class="link" value="5"><a href="#" rel="5">Health News</a></li>
+                </ul>
+
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="navbar_search">
+      <div class="navbar_search_country">
+        <p class="navbar_search_text" id="navCountry">Country: New Zealand</p>
+
+      </div>
+        <div class="navbar_search_box">
+            <span class="navbar_search_spanner">Search:</span>
+            <input type="text" class="navbar_search_inputtyper">
+
+
+        </div>
+        <div class="navbar_search_topic">
+          <p class="navbar_search_text" id="navTopic">Topic: Top Headlines</p>
+        </div>
+    </div>
+</nav>
+
+<!-- body-box -->
+ <div class="bodybox">
+
+ </div>    
+
+<!-- body box end    -->
+<!-- footer -->
+<div class="footerbox">
+    <div class="footerbox_inner">
+        <div class="footerbox_text">
+            <p class="footerbox_font">©Rory Turnbull, Portfolio, 2022.</p>
+        </div>
+        
+    
+        <button type="button" id="aboutbutton" class="btn btn-light">About</button>
+    </div>
+</div>
+<!-- footer end -->
+    <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+    Launch demo modal
+  </button> -->
+<!-- modal start -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+      <!-- modal end -->
+    <!-- <div  class="container" id="example"></div> -->
 <!-- bootstrap -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- jquery popper -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <!-- local script -->
-    <script src="./script/java.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

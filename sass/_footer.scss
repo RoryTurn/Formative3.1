@@ -1,0 +1,52 @@
+@import "var";
+
+.footerbox{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    background: $maindark;
+    align-items: center;
+    justify-content: center;
+    &_inner{
+        width: 95%;
+        height: 70%;
+        display: flex;
+        background: $mainmed; 
+        justify-content: center;
+        align-items: center;
+    }
+    &_text{
+        background: none;
+        width: 85%;
+        height: 100%;
+        align-items: center;
+        text-align: left;
+        justify-content: center;
+
+    }
+    &_font{
+        margin-top: 14px;
+        
+        background: none;
+        font-family: $fontextras;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+
+    }
+}
+
+#aboutbutton{
+    background: $mainoffwhite;
+    border: 2px solid $mainorange;
+    font-family: $fontextras;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    width: 140px;
+    color: $maindark;
+}
+#aboutbutton:hover{
+    background: $maindark;
+    color: white;
+}
