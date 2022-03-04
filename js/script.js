@@ -4,7 +4,7 @@ const key = `1a8f15bb3f1fe7bf3038e4129d028472`;
  
 var query= "top-headlines?";
 var nation= "country=nz";
-var max = "max=20";
+var max = "max=6";
 var language= "lang=en";
 
 
@@ -21,7 +21,7 @@ function countryChanger(x){
     if  (x === "1"){
     
        nation = "country=nz";
-       var web = "https://gnews.io/api/v4/" + query + "&" + nation + "&" + language + "/" + max + "&token=" + key;
+       var web = "https://gnews.io/api/v4/" + query + "&" + nation + "&" + language + '&' + max + "/&token=" + key;
        console.log(nation); 
        console.log(web);
        document.getElementById("navCountry").innerHTML= "Country: New Zealand";
@@ -148,16 +148,26 @@ function generateCard(i){
 
        $('#cardContent').append(
            `
-                   <div class="card card--style" style="width: 18rem;">
+                   <div class="card">
                        <div class="img-container">
                        <img class="card-img-top" src="${data.articles[i].image}" alt="Card image cap">
+
                        </div>    
                        <div class="card-body">
+                                   <div class="card-body-titlebox">
                                         <h5 class="card-title">${data.articles[i].title}</h5>
-                                        <p class="card-text">${data.articles[i].source.name}</p>
-                                        <p class="card-text">Danger Level: ${data.articles[i].publishedAt}</p>
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                                        Click for Details</button>
+                                   </div>
+                                   <div class="card-body-horizontalbox">
+                                        <div class="card-body-textbox">
+                                          <p class="card-text">${data.articles[i].source.name}</p>
+                                          <p class="card-text">${data.articles[i].publishedAt}</p>
+                                        </div>
+                                        <div class="card-body-buttonbox">
+                                          <button type="button" id="buttonbody" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                          Click for Details</button>
+                                        </div>
+                                   </div>
+
                        </div>
                    </div>  
            `
