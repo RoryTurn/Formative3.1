@@ -353,6 +353,55 @@
   color: black;
 }
 
+.welcomemessage {
+  width: 30%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #efefef;
+  border-radius: 20px;
+  border: 4px double #e1d89f;
+}
+.welcomemessage_title {
+  width: 100%;
+  height: 20%;
+  background: #d89216;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 2px solid #e1d89f;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.welcomemessage_title_text {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 23px;
+  font-weight: 550;
+  background: none;
+  letter-spacing: normal;
+  color: #efefef;
+}
+.welcomemessage_title_text:hover {
+  font-size: 24px;
+  color: #ebe645;
+}
+.welcomemessage_textbox {
+  width: 100%;
+  height: 80%;
+  background: none;
+  text-align: center;
+  text-justify: space-around;
+}
+.welcomemessage_textbox_text {
+  font-family: "League Spartan", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  background: none;
+  color: #2c061f;
+}
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -472,6 +521,7 @@
   padding: 8px;
   border-radius: 10px;
   margin-right: 35vw;
+  cursor: pointer;
 }
 
 .title:hover {

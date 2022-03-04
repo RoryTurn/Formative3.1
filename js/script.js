@@ -1,13 +1,14 @@
-console.log('poo');
+
+//  global variables------------------------------------------------------------------------
 // const key = `1a8f15bb3f1fe7bf3038e4129d028472`;
 const key = '1a703a9bba8059208c952443967c3e8a';
- 
+
 var query= "top-headlines?";
 var nation= "country=nz";
 var max = "max=6";
 var language= "lang=en";
 
-
+// country changer functions------------------------------------------------------------------------------
 
 $('#countryMenu li a').click(function(){
    var x=  $(this).attr('rel'); // Get the ref attribute from the "a" element
@@ -68,26 +69,20 @@ if (x  === "3"){
         var web = "https://gnews.io/api/v4/" + query + "&" + nation + "&" + language + '&' + max + "/&token=" + key;      
         console.log(nation, web);
         document.getElementById("navCountry").innerHTML= "Country: United States";
-        document.getElementById("navTopic").innerHTML= "Topic: Top Headlines";
-        
-        ajaxFunc(nation, web);   
-        
+        document.getElementById("navTopic").innerHTML= "Topic: Top Headlines";        
+        ajaxFunc(nation, web);     
 
         }
         
         
 };
-
+// topic changer functions------------------------------------------------------------------
 $('#categoryMenu li a').click(function(){
     var z=  $(this).attr('rel'); // Get the ref attribute from the "a" element
      console.log(z);
-     categoryChanger(z);
-     
+     categoryChanger(z);     
  });
  function categoryChanger(z){
- 
-    
- 
      if  (z === "1"){
      console.log("One")
      var query= "top-headlines?";
@@ -123,31 +118,28 @@ $('#categoryMenu li a').click(function(){
          document.getElementById("navTopic").innerHTML= "Topic: Health News";
          ajaxFunc(query, web);          
          }
-
-     
  };
 
 
-
+// ajax function (gets data from gnews.io and displays it)--------------------------------------------------------------------------
 function ajaxFunc(nation, web){
 $.ajax({
     type: "GET",
     url: web,    
     success:  function (data){
+       //     emptier for main welcome message
      $('#cardContent').empty();   
-        console.log(nation);
-        console.log(query);
-        console.log(web);
-        console.log(data.articles.length);
+// generates numbers for news cards
 function cardLoop(){
        let i = 0;
        for(i = 0; i<data.articles.length; i++){
                
        generateCard(i);       
        }
-//  modalFill();
 };  
 cardLoop();
+// card generator-----------------------------------------------------------------------------
+
 function generateCard(i){
       
        $('#cardContent').append(
@@ -178,6 +170,9 @@ function generateCard(i){
            `
            
        );
+
+       // modal generator---------------------------------------------------------------------------------
+
        $(".btn-primary").click(function(){
               let k =  $(this).attr('value');
               console.log(k);
@@ -204,20 +199,21 @@ function generateCard(i){
                      </div>
               </div>
        `
-       )
+                     )
+                            
+               });    
+
               
-});    
-
        
-      
-   };
+              };
 
 
-    }
+       }
 
 });
 
 };
+// end of script-------------------------------------------------------------------------------------------------------
 
 
 

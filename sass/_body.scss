@@ -1,5 +1,6 @@
 @import "var";
 
+// screen setup--------------------------------------------------------------------------------------------
 .bodybox{
 width: 100vw;
 height:75vh;
@@ -25,6 +26,8 @@ flex-direction: row;
     justify-content: space-evenly;
     }
 }
+
+// card classes-----------------------------------------------------------------------------------
 
 .card{
     width: 28%;
@@ -150,4 +153,57 @@ flex-direction: row;
     background: $elementalert;
     border: 2px solid $mainoffwhite;
     color: black;  
+}
+
+// welcome screen message-----------------------------------------------------------------------------------------
+
+
+.welcomemessage{
+    width: 30%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $mainoffwhite;
+    border-radius: 20px;
+    border: 4px double $mainlight;
+    &_title{
+        width: 100%;
+        height: 20%;
+        background: $mainorange;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom: 2px solid $mainlight;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        &_text{
+            font-family: $fontextras;
+            font-size: 23px;
+            font-weight: 550;
+            background: none;
+            letter-spacing: normal;
+            color: $mainoffwhite;
+        }
+        &_text:hover{
+            font-size: 24px;
+            color: $elementalert;;
+        }
+    }
+    &_textbox{
+        width: 100%;
+        height: 80%;
+        background: none;
+        text-align: center;
+        text-justify: space-around;
+        &_text{
+            
+            font-family: $fontbody;
+            font-size: 18px;
+            font-weight: 500;
+            background: none;
+            color: $maindark;
+        }
+    }
 }
