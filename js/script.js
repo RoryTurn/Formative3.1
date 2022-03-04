@@ -1,7 +1,6 @@
 
 //  global variables------------------------------------------------------------------------
-// const key = `1a8f15bb3f1fe7bf3038e4129d028472`;
-const key = '1a703a9bba8059208c952443967c3e8a';
+// const key = ""; - add your gnews.io API between the quotation marks and unslash to use site (use live server). 
 
 var query= "top-headlines?";
 var nation= "country=nz";
