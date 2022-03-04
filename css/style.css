@@ -1,3 +1,166 @@
+.aboutbox {
+  width: 60vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  background: #000957;
+  align-items: center;
+  justify-content: space-around;
+}
+.aboutbox_left {
+  width: 45%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  background: #577bc1;
+}
+.aboutbox_left_top {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  background: none;
+  align-items: center;
+  justify-content: center;
+}
+.aboutbox_left_bottom {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  background: none;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+.aboutbox_right {
+  width: 45%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  background: #577bc1;
+}
+.aboutbox_right_top {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  background: none;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+.aboutbox_right_bottom {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  background: none;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+.aboutbox_title {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  margin-bottom: 5px;
+  background: none;
+  line-height: normal;
+  letter-spacing: normal;
+  word-wrap: normal;
+  color: #efefef;
+}
+.aboutbox_text {
+  font-family: "League Spartan", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  background: none;
+  line-height: 15px;
+  letter-spacing: normal;
+  word-wrap: normal;
+  color: black;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.aboutbox_list {
+  background: none;
+  list-style-type: circle;
+}
+.aboutbox_list_item {
+  font-family: "League Spartan", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  background: none;
+  line-height: 20px;
+  letter-spacing: normal;
+  word-wrap: normal;
+  color: black;
+  background: none;
+}
+.aboutbox_link {
+  color: #ebe645;
+  font-size: 14.5px;
+  cursor: pointer;
+}
+.aboutbox_img {
+  background: url("../img/background_about.jpg");
+  width: 80%;
+  height: 80%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  border: 4px solid #344cb7;
+}
+.aboutbox_head {
+  font-family: "Oswald", sans-serif;
+  font-size: 35px;
+  background: none;
+  line-height: normal;
+  letter-spacing: double;
+  word-wrap: normal;
+  color: #efefef;
+  margin-left: 25px;
+}
+.aboutbox_head:hover {
+  color: #d89216;
+}
+
+#aboutModal {
+  border: 4px double white;
+  border-radius: 40px;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  color: none;
+}
+#aboutModal_body {
+  width: 65vw;
+  height: 65vh;
+  display: flex;
+  flex-direction: row;
+  background: black;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border: none;
+  color: none;
+}
+#aboutModal_header {
+  width: 65vw;
+  height: 5vw;
+  background: #2c061f;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border: none;
+}
+
+#bigbox {
+  background: none;
+  color: none;
+  border: none;
+}
+
 .footerbox {
   width: 100vw;
   height: 10vh;
@@ -102,6 +265,7 @@
   justify-content: center;
   text-align: center;
   border-radius: 15px;
+  padding-top: 5px;
 }
 .card-body-horizontalbox {
   display: flex;
@@ -121,6 +285,7 @@
   align-items: center;
   justify-content: center;
   text-align: left;
+  margin-top: 10px;
 }
 .card-body-buttonbox {
   display: flex;
@@ -137,6 +302,7 @@
   font-weight: 500;
   background: none;
   padding: 3px;
+  text-overflow: ellipsis;
 }
 .card-title:hover {
   color: #ebe645;
@@ -148,6 +314,7 @@
   font-weight: 500;
   background: none;
   color: #2c061f;
+  text-overflow: ellipsis;
 }
 
 .card-img-top {
@@ -296,7 +463,7 @@
 }
 
 .title {
-  font-family: "League Spartan", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 35px;
   font-weight: 600;
   letter-spacing: 1.5px;
@@ -345,6 +512,7 @@
   font-size: 20px;
   letter-spacing: 0.5px;
   width: 140px;
+  cursor: pointer;
 }
 
 #buttonheader:hover {
@@ -413,13 +581,15 @@
   padding: 10px;
 }
 .body_textbox_titles_text {
-  font-family: "League Spartan", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 20px;
   background: none;
   line-height: normal;
   letter-spacing: normal;
   word-wrap: normal;
   color: #efefef;
+  max-width: 70%;
+  text-overflow: ellipsis;
 }
 .body_textbox_body {
   display: flex;
@@ -433,17 +603,18 @@
 }
 .body_textbox_body_text {
   font-family: "League Spartan", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
   background: none;
-  line-height: 16px;
+  line-height: 18px;
   letter-spacing: normal;
   word-wrap: normal;
   color: black;
+  text-overflow: ellipsis;
 }
 
 .modal-title {
-  font-family: "League Spartan", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-size: 20px;
   width: fit-content;
@@ -475,6 +646,12 @@
   background: #577bc1;
   color: #efefef;
   border: 2px solid #ebe645;
+}
+
+#modalButton:hover, #modalClose:hover {
+  background: #ebe645;
+  border: 2px solid #efefef;
+  color: black;
 }
 
 * {

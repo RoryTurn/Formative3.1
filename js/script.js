@@ -1,6 +1,6 @@
 console.log('poo');
-const key = `1a8f15bb3f1fe7bf3038e4129d028472`;
-// const key = '1a703a9bba8059208c952443967c3e8a';
+// const key = `1a8f15bb3f1fe7bf3038e4129d028472`;
+const key = '1a703a9bba8059208c952443967c3e8a';
  
 var query= "top-headlines?";
 var nation= "country=nz";
@@ -25,6 +25,7 @@ function countryChanger(x){
        console.log(nation); 
        console.log(web);
        document.getElementById("navCountry").innerHTML= "Country: New Zealand";
+       document.getElementById("navTopic").innerHTML= "Topic: Top Headlines";
        
        ajaxFunc(nation, web);   
     
@@ -32,28 +33,31 @@ function countryChanger(x){
     }
  if (x  === "2"){
         
-        nation = "country=de";
-        var web = "https://gnews.io/api/v4/" + query + "&" + nation + "&" + language + "/" + max + "&token=" + key;
+        nation = "country=au";
+        var web = "https://gnews.io/api/v4/" + query + "&" + nation + "&" + language + '&' + max + "/&token=" + key;
         console.log(nation, web);
-        document.getElementById("navCountry").innerHTML= "Country: Germany";
+        document.getElementById("navCountry").innerHTML= "Country: Australia";
+        document.getElementById("navTopic").innerHTML= "Topic: Top Headlines";
         
         ajaxFunc(nation, web);   
         }
 if (x  === "3"){
         
         nation = "country=gb";
-        var web = "https://gnews.io/api/v4/" + query + "&" + nation + "&" + language + "/" + max + "&token=" + key;
+        var web = "https://gnews.io/api/v4/" + query + "&" + nation + "&" + language + '&' + max + "/&token=" + key;
         console.log(nation, web);
         document.getElementById("navCountry").innerHTML= "Country: United Kingdom";
+        document.getElementById("navTopic").innerHTML= "Topic: Top Headlines";
         
         ajaxFunc(nation, web);   
         }
  if (x  === "4"){
         
-        nation = "country=jp"
-        var web = "https://gnews.io/api/v4/" + query + "&" + nation + "&" + language + "/" + max + "&token=" + key;
+        nation = "country=ca"
+        var web = "https://gnews.io/api/v4/" + query + "&" + nation + "&" + language + '&' + max + "/&token=" + key;
         console.log(nation, web);
-        document.getElementById("navCountry").innerHTML= "Country: Japan";
+        document.getElementById("navCountry").innerHTML= "Country: Canada";
+        document.getElementById("navTopic").innerHTML= "Topic: Top Headlines";
         
         ajaxFunc(nation, web);   
 
@@ -61,9 +65,10 @@ if (x  === "3"){
  if (x === "5"){
       
         nation = "country=us";
-        var web = "https://gnews.io/api/v4/" + query + "&" + nation + "&" + language + "/" + max + "&token=" + key;       
+        var web = "https://gnews.io/api/v4/" + query + "&" + nation + "&" + language + '&' + max + "/&token=" + key;      
         console.log(nation, web);
         document.getElementById("navCountry").innerHTML= "Country: United States";
+        document.getElementById("navTopic").innerHTML= "Topic: Top Headlines";
         
         ajaxFunc(nation, web);   
         
@@ -86,35 +91,35 @@ $('#categoryMenu li a').click(function(){
      if  (z === "1"){
      console.log("One")
      var query= "top-headlines?";
-     var web = "https://gnews.io/api/v4/" + query + nation + "?" + language + "?" + max + "&token=" + key;
+     var web = "https://gnews.io/api/v4/" + query + "&" + nation + "&" + language + '&' + max + "/&token=" + key;
      document.getElementById("navTopic").innerHTML= "Topic: Top Headlines";
      ajaxFunc(query, web); 
      }
   if (z  === "2"){
          console.log("Two")
          var query= "search?q=technology";
-         var web = "https://gnews.io/api/v4/" + query + "&" +  nation + "?" + language + "?" + max + "&token=" + key;
+         var web = "https://gnews.io/api/v4/" + query + "&" + nation + "&" + language + '&' + max + "/&token=" + key;
          document.getElementById("navTopic").innerHTML= "Topic: Technology News";
          ajaxFunc(query, web);          
          }
  if (z  === "3"){
          console.log("Three")
          query = "search?q=science";
-         var web = "https://gnews.io/api/v4/" + query + "&" +  nation + "?" + language + "?" + max + "&token=" + key;
+         var web = "https://gnews.io/api/v4/" + query + "&" + nation + "&" + language + '&' + max + "/&token=" + key;
          document.getElementById("navTopic").innerHTML= "Topic: Science News";
          ajaxFunc(query, web);          
          }
   if (z  === "4"){
          console.log("Four")
          query = "search?q=entertainment";
-         var web = "https://gnews.io/api/v4/" + query + "&" +  nation + "?" + language + "?" + max + "&token=" + key;
+         var web = "https://gnews.io/api/v4/" + query + "&" + nation + "&" + language + '&' + max + "/&token=" + key;
          document.getElementById("navTopic").innerHTML= "Topic: Entertainment News";
          ajaxFunc(query, web);         
          }
   if (z  === "5"){
          console.log("Five")
          query = "search?q=health";
-         var web = "https://gnews.io/api/v4/" + query + "&" + nation + "&" + language + "/" + max + "&token=" + key;
+         var web = "https://gnews.io/api/v4/" + query + "&" + nation + "&" + language + '&' + max + "/&token=" + key;
          document.getElementById("navTopic").innerHTML= "Topic: Health News";
          ajaxFunc(query, web);          
          }
@@ -137,15 +142,14 @@ $.ajax({
 function cardLoop(){
        let i = 0;
        for(i = 0; i<data.articles.length; i++){
-              
-       generateCard(i);
-       modalFill(i);
+               
+       generateCard(i);       
        }
-       
+//  modalFill();
 };  
 cardLoop();
 function generateCard(i){
-
+      
        $('#cardContent').append(
            `
                    <div class="card">
@@ -161,9 +165,10 @@ function generateCard(i){
                                         <div class="card-body-textbox">
                                           <p class="card-text">${data.articles[i].source.name}</p>
                                           <p class="card-text">${data.articles[i].publishedAt}</p>
+                                          <p id="meMe" rel=${i}></p>
                                         </div>
                                         <div class="card-body-buttonbox">
-                                          <button type="button" id="buttonbody" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                          <button type="button" value=${i} id="buttonbody" class="btn btn-primary" data-toggle="modal" data-target="#cardModal">
                                           Click for Details</button>
                                         </div>
                                    </div>
@@ -173,39 +178,40 @@ function generateCard(i){
            `
            
        );
-       
-   
-   };
-        
-function modalFill(i){
-       var y = i;
-       document.getElementById("modalTitle").innerHTML= `${data.articles[y].title}`;
-       document.getElementById("modalSource").innerHTML= `${data.articles[y].source.name}`;
-       document.getElementById("modalURL").href = `${data.articles[y].url}`;
-     
+       $(".btn-primary").click(function(){
+              let k =  $(this).attr('value');
+              console.log(k);
+       document.getElementById('modalTitle').innerHTML= `${data.articles[k].title}`;
+       document.getElementById('modalSource').innerHTML= `${data.articles[k].source.name}`;
+
        $('#modalBody').empty().append(
               `
               <div class="body">
                      <div class="body_picbox">
-                              <img class="body_picbox_image" id="modalImage" src="${data.articles[y].image}">
+                              <img class="body_picbox_image" id="modalImage" src="${data.articles[k].image}">
                      </div>
                      <div class="body_textbox">
-                     <div class="body_textbox_titles">
-                     <p class="body_textbox_titles_text" id="modalCountry"></p>
-                     <p class="body_textbox_titles_text" id="modalDate">${data.articles[y].publishedAt}</p>
+                     <div class="body_textbox_titles">                     
+                     <p class="body_textbox_titles_text" id="modalDate">${data.articles[k].publishedAt}</p>
        
                   
                      </div>
                      <div class="body_textbox_body">
-                     <p class="body_textbox_body_text" id="modalDesc">${data.articles[y].description}</p>
+                     <p class="body_textbox_body_text" id="modalDesc">${data.articles[k].description}</p>
                      </div>
        
                               
                      </div>
               </div>
        `
-       )};
-     
+       )
+              
+});    
+
+       
+      
+   };
+
 
     }
 
@@ -213,8 +219,5 @@ function modalFill(i){
 
 };
 
-// function link(){
-//        document.getElementById("modalURL").href = "http://www.google.com";
-// };
-// link();
+
 

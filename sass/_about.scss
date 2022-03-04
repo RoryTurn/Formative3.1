@@ -1,1 +1,183 @@
 @import "var";
+
+.aboutbox{
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    background: $elementdark;
+    align-items: center;
+    justify-content: space-around;
+
+
+    &_left{
+        width: 45%;
+        height: 95%;
+        display: flex;
+        flex-direction: column;
+        background: $elementlight;
+
+        &_top{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            background: none;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+        &_bottom{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            background: none;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+
+        }
+
+    }
+    &_right{
+        width: 45%;
+        height: 95%;
+        display: flex;
+        flex-direction: column;
+        background: $elementlight;
+        &_top{
+            width: 100%;
+            height: 65%;
+            display: flex;
+            flex-direction: column;
+            background: none;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+
+        }
+        &_bottom{
+            width: 100%;
+            height: 35%;
+            display: flex;
+            flex-direction: column;
+            background: none;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            
+        }
+
+    }
+    &_title{
+        font-family: $fontheader;
+        font-size: 20px;
+        margin-bottom: 5px;
+        background: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-wrap: normal;
+        color: $mainoffwhite; 
+
+    }
+    &_text{
+        font-family: $fontbody;
+        font-size: 14px;
+        font-weight: 400;
+        background: none;
+        line-height: 15px;
+        letter-spacing: normal;
+        word-wrap: normal;
+        color: black;
+        padding-left: 3px;
+        padding-right: 3px; 
+
+    }
+    &_list{
+        background: none;
+        list-style-type: circle;
+
+        &_item{
+            font-family: $fontbody;
+            font-size: 14px;
+            font-weight: 400;
+            background: none;
+            line-height: 20px;
+            letter-spacing: normal;
+            word-wrap: normal;
+            color: black; 
+            background: none;
+
+        }
+
+
+    }
+    &_link{
+        color: $elementalert;
+        font-size: 14.5px;
+        cursor: pointer;
+    }
+    &_img{
+        background: url("../img/background_about.jpg");
+        width: 80%;
+        height: 80%;
+        background-size: cover;
+        background-repeat: no-repeat;        
+        border-radius: 20px;
+        border: 4px solid $elementmed;
+
+    }
+    &_head{
+        font-family: $fontheader;
+        font-size: 35px;
+        background: none;
+        line-height: normal;
+        letter-spacing: double;
+        word-wrap: normal;
+        color: $mainoffwhite; 
+        margin-left: 25px;
+
+    }
+    &_head:hover{
+        color: $mainorange;
+    }
+    
+
+}
+#aboutModal{
+    border: 4px double white;
+    border-radius: 40px;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: none;
+    &_body{
+    width: 65vw;
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    background: black;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border: none;
+    color: none;
+    }
+    &_header{
+        width: 65vw;
+        height: 5vw;
+        background: $maindark;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        border: none;
+    }
+
+}
+#bigbox{
+    background: none;
+    color: none;
+    border: none;
+}
