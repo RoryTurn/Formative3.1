@@ -22,7 +22,7 @@
 
         <div class="navbar_top_main">
             <div class="logo"></div>
-            <h class="title">News Station Sigma</h>
+            <h class="title" onClick="document.location.reload(true)">News Station Sigma</h>
             
         </div>
         <div class="navbar_top_button">
@@ -33,9 +33,9 @@
                 <div class="dropdown-menu">
                   <ul class="link_menu"  id="countryMenu">
                   <li class="link"><a href="#" rel="1">New Zealand</a></li>                  
-                  <li class="link"><a href="#" rel="2">Germany</a></li>                  
+                  <li class="link"><a href="#" rel="2">Australia</a></li>                  
                   <li class="link"><a href="#" rel="3">United Kingdom</a></li>
-                  <li class="link"><a href="#" rel="4">Japan</a></li>
+                  <li class="link"><a href="#" rel="4">Canada</a></li>
                   <li class="link"><a href="#" rel="5">United States</a></li> 
                 </ul>                
                 </div>
@@ -59,7 +59,7 @@
     </div>
     <div class="navbar_search">
       <div class="navbar_search_country">
-        <p class="navbar_search_text" id="navCountry">Country: New Zealand</p>
+        <p class="navbar_search_text" id="navCountry">Country: Select</p>
 
       </div>
         <div class="navbar_search_box">
@@ -69,7 +69,7 @@
 
         </div>
         <div class="navbar_search_topic">
-          <p class="navbar_search_text" id="navTopic">Topic: Top Headlines</p>
+          <p class="navbar_search_text" id="navTopic">Topic: Select</p>
         </div>
     </div>
 </nav>
@@ -80,12 +80,26 @@
 
   <div class="cardbox">
   <div id="cardContent" class="cardbox_content">
-  </div>
-<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-    Launch demo modal
-  </button> -->
- </div>    
+    <!-- welcome message (opening screen) -->
+    <div class="welcomemessage">
+      <div class="welcomemessage_title">
+        <h class="welcomemessage_title_text">
+          Welcome to News Station Sigma
+        </h>
+      </div>
+      <div class="welcomemessage_textbox">
+        <p class="welcomemessage_textbox_text">
+          Please select a Country from the menu above
+        </p><br/>
+        <p class="welcomemessage_textbox_text">
+          After that, select a Topic from the other menu.
+        </p>
 
+      </div>
+    </div>
+  </div>
+ </div>    
+</div>
 <!-- body box end    -->
 <!-- footer -->
 <div class="footerbox">
@@ -95,14 +109,14 @@
         </div>
         
     
-        <button type="button" id="aboutbutton" class="btn btn-light">About</button>
+        <button type="button" id="aboutbutton" class="btn btn-light" data-toggle="modal" data-target=".bd-example-modal-lg">About</button>
     </div>
 </div>
 <!-- footer end -->
 
 <!-- modal start -->
-<!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+<!-- Modal for Cards -->
+<div class="modal fade" id="cardModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header" id="modalHead">
@@ -123,6 +137,73 @@
       </div>
     </div>
   </div>
+  <!-- modal for cards ends -->
+  <!-- modal for about section -->
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" >
+    <div class="modal-dialog modal-lg" >
+      <div id="aboutModal">
+      <div class="modal-content" id="bigbox">
+        <div class="modal-header" id="aboutModal_header">
+          <h5 class="aboutbox_head">About News Station Sigma</h5>
+          
+          <button type="button" id="modalClose"  class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        <div id="aboutModal_body">
+          <div class="aboutbox">
+            <div class="aboutbox_left">
+              <div class="aboutbox_left_top">
+                <div class="aboutbox_img"></div>
+
+              </div>
+              <div class="aboutbox_left_bottom">
+                <h class="aboutbox_title">Plugins, Tools and Acessories Used</h>
+                <ul class="aboutbox_list">
+                  <li class="aboutbox_list_item">Visual Stuidios Code</li>
+                  <li class="aboutbox_list_item">Bootstrap and JQuery for Javascript</li>
+                  <li class="aboutbox_list_item">Node.js Platform</li>
+                  <li class="aboutbox_list_item">NPM.js Package</li>
+                  <li class="aboutbox_list_item">Gulp Sass Package</li>                  
+                  <li class="aboutbox_list_item">Gulp SCSS Package</li>
+                  <li class="aboutbox_list_item">Google Fonts (Oswald, Leauge Spartain, Source Sans Pro)</li>
+                  
+                  <li class="aboutbox_list_item">Flaticon (for Newspaper symbol in header)</li>
+                </ul>
+
+
+              </div>
+
+            </div>
+            <div class="aboutbox_right">
+              <div class="aboutbox_right_top">
+                <h class="aboutbox_title">Project Details</h>
+                <p class="aboutbox_text">This project was created by Rory Turnbull for his portfolio in 2022.<br/>
+                Rory created this news sorting website as part of the Web Develpment and UX tertiary course run by Yoobee in Wellington for UP Education.<br/>
+                This is an example one page application to show how Rory has developed techniues ans skills in using external API's to source, filter and dispaly information.<br/>
+                Also, this one page application makes use of the Node platform and NPM packages (for example, Gulp, which transfers SCSS data into CSS) and is connected to a Github repositry.<br/><br/>
+                Thank you for looking at this application, please visit Rory's Github page or use the contact details below.<br/></p>
+                </p>
+              </div>
+              <div class="aboutbox_right_bottom">
+                <h class="aboutbox_title">Contact Details</h>
+                <ul class="aboutbox_list">
+                  <li class="aboutbox_list_item">Email Adress: <a class="aboutbox_link" href="">turnburory@gmail.com</a></li>
+                  <li class="aboutbox_list_item">Phone Number: <a class="aboutbox_link" href="">027 **** *****</a></li>
+                  <li class="aboutbox_list_item">Facebook: <a class="aboutbox_link" href="https://www.facebook.com/rory.turnbull.94/">My Facebook</a></li>
+                  <li class="aboutbox_list_item">Github: <a class="aboutbox_link" href="https://github.com/RoryTurn">My Github</a></li>
+                  <li class="aboutbox_list_item">Figma: <a class="aboutbox_link" href="https://www.figma.com/files/user/1004608384874041483?fuid=1004608384874041483">My Figma</a></li>
+                </ul>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+  <!-- about modal ends -->
       <!-- modal end -->
     <!-- <div  class="container" id="example"></div> -->
 <!-- bootstrap -->

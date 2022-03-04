@@ -55,6 +55,9 @@
             letter-spacing: normal;
             word-wrap: normal;
             color: $mainoffwhite; 
+            max-width: 70%;
+            text-overflow: ellipsis;
+
 
         }
     
@@ -72,13 +75,14 @@
         &_text{
 
             font-family: $fontbody;
-            font-size: 15px;
+            font-size: 17px;
             font-weight: 500;
             background: none;
-            line-height: 16px;
+            line-height: 18px;
             letter-spacing: normal;
             word-wrap: normal;
-            color: black; 
+            color: black;
+            text-overflow: ellipsis; 
 
         }
 
@@ -123,5 +127,10 @@ background: none;
     background: $elementlight;
     color: $mainoffwhite;
     border: 2px solid $elementalert;
+}
+#modalButton:hover, #modalClose:hover{
+    background: $elementalert;
+    border: 2px solid $mainoffwhite;
+    color: black;  
 }
 // end modal
